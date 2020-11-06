@@ -18,7 +18,10 @@ public class Korpa {
         return artikli;
     }
 
-    //public int dajUkupnuCijenuArtikala(){
-    //    double suma
-    //}
+    public int dajUkupnuCijenuArtikala(){
+        double iznos = 0;
+        for(int i=0; i<=brElemenata; i++)
+            iznos += artikli[i].getCijena();
+        return  iznos;
+    }
 }
