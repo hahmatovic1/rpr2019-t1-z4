@@ -23,5 +23,21 @@ public class Supermarket {
         return artikli;
     }
 
+    public static void ispisArtikala(Artikl[] artikli){
+        for(int i=0; i<1000; i++)
+            if((artikli[i])!=null)System.out.println(artikli[i].getNaziv() + " " + artikli[i].getKod());
+            else return;
+    }
 
+  /*public void izbaciArtiklSaKodom(String kod){
+        int pozicijaUNizu = 1000;
+
+        for(int i = brojElemenata-1; i >= 0; i--){
+            if(kod.equals(artikli[i].getKod())) pozicijaUNizu = i;
+        }
+
+        if(pozicijaUNizu)
+
+    }
+    */
 }
