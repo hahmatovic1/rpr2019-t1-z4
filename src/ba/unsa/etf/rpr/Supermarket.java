@@ -1,10 +1,13 @@
 package ba.unsa.etf.rpr;
 
 public class Supermarket {
-    private Artikl[] artikli = new Artikl[1000];
-    private int brojElemenata; //ovo ce se automatski postaviti na 0
+    private Artikl[] artikli;
+    private int brojElemenata;
 
-
+    public Supermarket() {
+        artikli = new Artikl[1000];
+        brojElemenata = 0;
+    }
 
     boolean dodajArtikl(Artikl novi){
         if(brojElemenata >= 1000) {
