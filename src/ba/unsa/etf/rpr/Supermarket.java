@@ -29,15 +29,21 @@ public class Supermarket {
             else return;
     }
 
-  /*public void izbaciArtiklSaKodom(String kod){
+  public Artikl izbaciArtiklSaKodom(String kod){
         int pozicijaUNizu = 1000;
 
+        Artikl izbaci = null;
+
         for(int i = brojElemenata-1; i >= 0; i--){
-            if(kod.equals(artikli[i].getKod())) pozicijaUNizu = i;
+            if(kod.equals(artikli[i].getKod())) {
+                izbaci = new Artikl(artikli[i].getNaziv(), artikli[i].getCijena(), artikli[i].getKod());
+                for(int j = pozicijaUNizu; j < brojElemenata-pozicijaUNizu; j++){
+                    artikli[j] = null;
+                    artikli[j] = artikli[j+1];
+                }
+            }
         }
-
-        if(pozicijaUNizu)
-
+        return  izbaci;
     }
-    */
+
 }
