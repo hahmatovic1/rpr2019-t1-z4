@@ -9,6 +9,7 @@ public class Supermarket {
         brojElemenata = 0;
     }
 
+
     public boolean dodajArtikl(Artikl novi){
         if(brojElemenata >= 1000) {
             System.out.println("Magacin popunjen! Ne mozete dodavati vise artikala");
