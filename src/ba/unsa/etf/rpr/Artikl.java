@@ -10,6 +10,18 @@ public class Artikl {
         this.cijena = cijena;
         this.kod = kod;
     }
+
+    public String getNaziv() {
+        return naziv;
+    }
+
+    public int getCijena() {
+        return cijena;
+    }
+
+    public String getKod() {
+        return kod;
+    }
 }
 
 
