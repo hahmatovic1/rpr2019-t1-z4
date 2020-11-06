@@ -1,11 +1,16 @@
 package ba.unsa.etf.rpr;
 
 public class Korpa {
-    private Artikl[] artikli = new Artikl[50];
-    private int brojElemenata = 0;
+    private Artikl[] artikli;
+    private int brojElemenata;
+
+    public Korpa() {
+        artikli = new Artikl[50];
+        brojElemenata = 0;
+    }
 
     public boolean dodajArtikl(Artikl novi){
-        if(brojElemenata >= 0) {
+        if(brojElemenata >= 50) {
             System.out.println("Korpa puna! Ne mozete dodavati vise artikala");
             return  false;
         }
@@ -20,7 +25,7 @@ public class Korpa {
 
     public int dajUkupnuCijenuArtikala(){
         int iznos = 0;
-        for(int i = 0; i<= brojElemenata; i++)
+        for(int i = 0; i< brojElemenata; i++)
             iznos += artikli[i].getCijena();
         return iznos;
     }
