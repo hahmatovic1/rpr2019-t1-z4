@@ -17,4 +17,8 @@ public class Korpa {
     public Artikl[] getArtikli() {
         return artikli;
     }
+
+    //public int dajUkupnuCijenuArtikala(){
+    //    double suma
+    //}
 }
