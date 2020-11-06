@@ -14,4 +14,7 @@ public class Korpa {
         return true;
     }
 
+    public Artikl[] getArtikli() {
+        return artikli;
+    }
 }
