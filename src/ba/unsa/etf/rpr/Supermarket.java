@@ -35,12 +35,13 @@ public class Supermarket {
         for(int i = brojElemenata-1; i >= 0; i--){
             if(kod.equals(artikli[i].getKod())) {
                 izbaci = new Artikl(artikli[i].getNaziv(), artikli[i].getCijena(), artikli[i].getKod());
-                for(int j = i; j < brojElemenata-i; j++){
+                for(int j = i; j < brojElemenata; j++){
                     artikli[j] = null;
-                    artikli[j] = artikli[j+1];
+                    if(j<brojElemenata-1) artikli[j] = artikli[j+1];
                 }
             }
         }
+        brojElemenata--;
         return  izbaci;
     }
 
