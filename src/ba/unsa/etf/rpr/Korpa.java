@@ -20,7 +20,7 @@ public class Korpa {
 
     public int dajUkupnuCijenuArtikala(){
         int iznos = 0;
-        for(int i=0; i<=brojElemenata; i++)
+        for(int i = 0; i<= brojElemenata; i++)
             iznos += artikli[i].getCijena();
         return iznos;
     }
@@ -28,10 +28,10 @@ public class Korpa {
     public Artikl izbaciArtiklSaKodom(String kod) {
         Artikl izbaci = null;
 
-        for(int i = brojElemenata-1; i >= 0; i--){
+        for(int i = brojElemenata -1; i >= 0; i--){
             if(kod.equals(artikli[i].getKod())) {
                 izbaci = new Artikl(artikli[i].getNaziv(), artikli[i].getCijena(), artikli[i].getKod());
-                for(int j = i; j < brojElemenata-i; j++){
+                for(int j = i; j < brojElemenata -i; j++){
                     artikli[j] = null;
                     artikli[j] = artikli[j+1];
                 }
