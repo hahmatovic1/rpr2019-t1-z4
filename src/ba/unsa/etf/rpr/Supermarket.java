@@ -30,14 +30,12 @@ public class Supermarket {
     }
 
   public Artikl izbaciArtiklSaKodom(String kod){
-        int pozicijaUNizu = 1000;
-
         Artikl izbaci = null;
 
         for(int i = brojElemenata-1; i >= 0; i--){
             if(kod.equals(artikli[i].getKod())) {
                 izbaci = new Artikl(artikli[i].getNaziv(), artikli[i].getCijena(), artikli[i].getKod());
-                for(int j = pozicijaUNizu; j < brojElemenata-pozicijaUNizu; j++){
+                for(int j = i; j < brojElemenata-i; j++){
                     artikli[j] = null;
                     artikli[j] = artikli[j+1];
                 }
